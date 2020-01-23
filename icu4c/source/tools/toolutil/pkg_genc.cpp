@@ -694,6 +694,8 @@ getArchitecture(uint16_t *pCPU, uint16_t *pBits, UBool *pIsBigEndian, const char
         // for all architectures though.
 #   if defined(_M_IX86)
         *pCPU = IMAGE_FILE_MACHINE_I386;
+#   elif defined(_M_AMD64)
+        *pCPU=IMAGE_FILE_MACHINE_AMD64;
 #   else
         *pCPU = IMAGE_FILE_MACHINE_UNKNOWN;
 #   endif
